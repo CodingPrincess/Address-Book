@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title> User Profile </title>
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'book/style.css' %}" />
+</head>
+<body>
+<h3> Welcome : {{user.username}} </h3>
+
+<strong> Your phone numbers :</strong> {% for i in user.phonenumber_set.all %}
+<p>{{i.phone}}</p>
+{% endfor %} <br/><br/>
+
+<strong>Your email ids :</strong> {% for i in user.email_add_set.all %}
+<p>{{i.email_address}}</p>
+{% endfor %} <br/><br/>
+
+<strong> Your pin is : {{ user.pin }} </strong><br/><br/>
+
+<strong> Details of your websites :</strong> {% for i in user.website_set.all %}
+<p> Blog : {{i.blog}} </p>
+<p> Website : {{i.web_site}} </p>
+{% endfor %}<br/><br/>
+
+<strong>Your social network links:</strong> {% for i in user.socialnetwork_set.all %}
+<p>Facebook : {{ i.facebook }} </p>
+<p>Twitter : {{ i.twitter }} </p>
+<p> LinkedIn : {{ i.linkedin }} </p>
+{% endfor %}<br/><br/>
+
+</body>
+</html>

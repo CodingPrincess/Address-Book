@@ -1,0 +1,15 @@
+body
+{
+    background-color: #ACACFF;
+	font-family: verdana,helvetica,arial,sans-serif;
+}
+
+a 
+{
+    text-decoration: none;
+}
+
+.nav li
+{
+    display: inline;
+}

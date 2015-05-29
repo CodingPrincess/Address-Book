@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title> PIN generation </title>
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'book/style.css' %}" />
+</head>
+
+<body>
+
+    <h3> Pin has been generated successfully. Go Back to profile. </h3>
+    {% for i in user.pin.all %}
+    <p> Generated pin for you: {{ i.user_pin }}</p>
+    {% endfor %}
+
+</body>
+
+</html>

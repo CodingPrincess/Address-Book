@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Public profile</title>
+	{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'book/style.css' %}" />
+</head>
+<body>
+<h3> Welcome : {{user.username}} </h3>
+
+<a href="/book/login/">LOG IN</a> to get the user's phone number.
+
+<strong>Email ID :</strong> {% for i in user.mailaddress_set.all %}
+<p>{{i.email_add}}</p>
+{% endfor %}
+
+<strong>Website Details :</strong> {% for i in user.website_set.all %}
+<p>Website : {{i.web_site}}</p>
+<p>Blog : {{i.blog}}</p>
+{% endfor %}
+
+<strong>Social Links:</strong> {% for i in user.socialnetwork_set.all %}
+<p> Facebook : {{ i.facebook }} </p>
+<p> Twitter : {{ i.twitter }} </p>
+<p> LinkedIn : {{ i.linkedin }} </p>
+{% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+ <title> Edit Profile </title>
+ 
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'book/style.css' %}" />
+</head>
+
+<body>
+
+    <form id = "edit_profile" method="POST" action="/book/edit/" />
+	<center>
+	<font color ="white">
+	<h2> Please edit your details </h2>
+	<table>
+	<tr>
+	<td> Phone: </td>
+    <td> <input type="text" name="phone"  placeholder ="0123456789" size="40" /> </td>
+	</tr>
+     
+    <tr>	 
+    <td>Email: </td> <td><input type="email" name="email" placeholder="abc@example.com " size="40" /></td>
+    </tr>       
+    
+     <tr>	
+    <td> Website:</td> <td> <input type="text" name="website" placeholder="http://www.example.com" size="40" /></td>
+     </tr>
+	 
+     <tr>	 
+    <td> Blog:</td> <td><input type="text" name="website" placeholder="http://www.wordpress.com/blog/" size="40" /></td>
+     </tr>     
+    
+	 <tr>
+    <td> Facebook:</td> <td> <input type="text" name="facebook" placeholder="https://www.facebook.com/yourid" size="40" /></td>
+     </tr>       
+          
+     <tr>		  
+    <td> Twitter:</td> <td> <input type="text" name="twitter" placeholder="https://www.twitter.com/@username" size="40" /></td>
+     </tr>
+
+     <tr>	 
+    <td> LinkedIn:</td> <td><input type="text" name="linkedin" placeholder= "http://linkedin.com/in/profilelink" size="40"/></td>
+     </tr>    
+
+     </table>	 
+	<br/></br>
+    	
+	<center> <input type="submit" value="Submit" /> </center>
+	</font>
+	 </center>
+	 
+    </form>
+</body>
+
+</html>

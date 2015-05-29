@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+<head> 
+<title> Index Page </title>
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'book/style.css' %}" />
+</head>
+
+<body>
+    {% if user.is_authenticated %}
+	<h2>Welcome {{ user.username }} </h2>
+	<h3>Email id : {{ user.email_add }}</h3>	
+	<ul class="nav">
+	<li> <a href="/book/userprofile/">Profile</a> </li> 
+	<li> <a href="/book/pin/">Get Pin</a> </li> 
+	<li> <a href="/book/edit/">Edit Profile</a></li> 
+	<li> <a href="/book/contacts/">My contacts</a></li> 
+	<li> <a href="/book/logout/">Logout</a></li> 
+	</ul>
+	
+    {% else %}
+    <center>
+	<p><h3> Welcome to Online Address Book!  <br/>Please log in. </h3> </p>
+	<br/><br/>
+	<a href="/book/login/">Login</a> &nbsp; &nbsp; &nbsp;
+	<a href="/book/register/">New User? Sign Up</a>
+	</center>
+    {% endif %} 
+</body>
+
+
+</html>
