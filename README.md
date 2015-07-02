@@ -1,2 +1,2 @@
 # Address-Book
-An assignment on online address book submitted to Open Labs Pvt Ltd
+An online address book in Django
